@@ -5,6 +5,7 @@ const fs = require('fs');
 let mainWindow;
 // 数据文件存储在应用程序目录下的 data.json 文件中
 // 这样用户可以直接找到并编辑这个文件
+// 可以修改此路径指向其他位置的data.json文件
 let dataPath = path.join(__dirname, 'data.json');
 
 function createWindow() {
