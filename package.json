@@ -1,0 +1,39 @@
+{
+  "name": "resume-plugin",
+  "version": "1.0.0",
+  "description": "本插件旨在解决在秋招简历投递过程中，需要针对不同网站简历模板重复手动填写简历内容的痛点。通过提供一个悬浮窗口，方便用户快速复制预设的简历信息到剪切板，从而提高简历填写的效率。",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^37.3.1",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.example.resume-plugin",
+    "productName": "Resume Assistant",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "style.css",
+      "data.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "electronDownload": {
+      "mirror": "https://npmmirror.com/mirrors/electron/"
+    }
+  }
+}

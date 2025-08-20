@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>简历助手</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="title-bar">
+        <div class="title">简历助手</div>
+        <div class="controls">
+            <button id="toggle-on-top">📌</button>
+            <button id="close-btn">❌</button>
+        </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+        <button id="add-module">添加模块</button>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2 id="modal-title"></h2>
+      <input type="text" id="modal-input-key" placeholder="模块名称">
+      <textarea id="modal-input-value" placeholder="模块内容"></textarea>
+      <button id="modal-save-button">保存</button>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
